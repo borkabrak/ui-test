@@ -4,10 +4,12 @@ $ ->
 
     initialHeight = 400
 
+    $('.read-more-container').height(initialHeight)
+
     return {
 
       open : $('.button').on 'click', ->
-        if $('.read-more-container').height() > 400
+        if $('.read-more-container').height() > initialHeight
           $('.read-more-container').animate(
             height: initialHeight
           , 500)
