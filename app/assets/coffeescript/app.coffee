@@ -14,13 +14,13 @@ $ ->
             height: initialHeight
           , 500)
           $(this).text('Read more')
+
         else
           $('.read-more-container').animate(
             height: 1600
           , 500)
           $(this).text('Read less')
         false
-
 
       lightbox : $('.images-container').on 'click', 'img', ->
         image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'))
