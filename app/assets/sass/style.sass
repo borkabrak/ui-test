@@ -1,3 +1,9 @@
+// Color variables
+$light-blue : #E5EBEE
+$dark-blue  : #1E344C
+$dim-blue   : #133944
+$vivid-blue : #124385
+
 body
   font-family: Georgia
   padding: 0
@@ -31,7 +37,7 @@ ul
 
 // Buttons
 .button
-  background-color: #1E344C
+  background-color: $dark-blue
   padding: 0.6em
   color: white
   margin-top: 0.6em
@@ -44,7 +50,7 @@ h1
 
 h3
   font-size: 1.2em
-  color: #133944
+  color: $dim-blue
 
 
 // Image section
@@ -53,14 +59,14 @@ h3
   margin-top: 5%
   overflow: hidden
 
-.first-image, .second-image, .third-image
+.image
   float: left
   width: 30%
   margin-right: 5%
   img
     max-width: 100%
 
-.third-image
+.last-image
   margin-right: 0
 
 .image-container
@@ -73,7 +79,7 @@ h3
 .navigation
   font-family: arial
   text-align: center
-  background-color: #124385
+  background-color: $vivid-blue
   ul
     display: inline-block
     height:  3.5em
@@ -84,7 +90,6 @@ h3
       float: left
       height: 3.5em
       margin: 0
-      background-color: #124385
       width: 150px
       &:nth-child(3)
         margin-right: 150px
@@ -100,7 +105,7 @@ h3
   font-family: arial
   margin-bottom: 3.5em
   text-align: center
-  background-color: #E5EBEE
+  background-color: $light-blue
   ul
     display: inline-block
     height:  3.5em
@@ -112,7 +117,7 @@ h3
       width: auto
       margin: 0
       a
-        color: #133944
+        color: $dim-blue
         text-decoration: none
         line-height: 3.5em
         padding: 0 1em
@@ -141,7 +146,7 @@ footer
   font-family: arial
   overflow: hidden
   font-size: 12px
-  background-color: #E5EBEE
+  background-color: $light-blue
   margin-top: 4em
   padding-top: 1.8em
   nav
@@ -160,6 +165,6 @@ footer
       padding: 0.8em 0
   a
     text-decoration: none
-    color: #1E344C
+    color: $dark-blue
     &:hover
       text-decoration: underline
