@@ -1,0 +1,27 @@
+FIXING THE LONELY PLANET TEST CODE
+==================================
+
+HTML
+----
+
+* doctype
+* document language
+* charset
+* I'd love to HTML5 the hell out of this, but that would take a more or
+    less total rewrite.  Put a pin in that and come back to it, time
+    permitting.  Oh..  it's already *partially* HTML5, what with the <nav>
+    elements..
+
+CSS
+---
+* Change 'px' to something more proportional.. 'em', or percentages.
+
+* Well, that (first|second|...)image class/id thing should be consolidated
+  into a single class name.
+  - The last one seems to need a special margin.  Make sure to catch that.
+
+* Color variables seem like a good idea here..
+
+
+JAVASCRIPT
+----------
