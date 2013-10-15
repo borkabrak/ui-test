@@ -19,8 +19,8 @@ $ ->
         collapsed = $('.read-more-container').height() > initialHeight
 
         $('.read-more-container').animate(
-            height: if collapsed then initialHeight else maxHeight, 
-            readmoreDelay)
+            height: if collapsed then initialHeight else maxHeight
+          , readmoreDelay)
           $(this).text(if collapsed then 'Read more' else 'Read less')
 
         false
@@ -32,6 +32,9 @@ $ ->
         $('body').append(lightboxContainer).on 'keyup', (e) ->
           if e.keyCode is 13 or e.keyCode is 27
             $('.lightbox').remove()
+        
+        $('body').on 'click', (e) ->
+            if $(e.target).hasClass('lightbox') then $('.lightbox').remove()
 
     }
 
