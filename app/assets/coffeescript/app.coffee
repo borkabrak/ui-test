@@ -2,24 +2,27 @@ $ ->
 
   window.LP = (->
 
-    initialHeight = 400
+    # When picking identifiers, I normally prefer underscores to camelCase, but
+    # that's kind of arbitrary.  As long as we all use the same thing, it
+    # doesn't really matter.  So I'll go with what I find already here.
+
+    initialHeight   = 400
+    maxHeight       = 1600
+    readmoreDelay   = 500
 
     $('.read-more-container').height(initialHeight)
 
     return {
 
       open : $('.button').on 'click', ->
-        if $('.read-more-container').height() > initialHeight
-          $('.read-more-container').animate(
-            height: initialHeight
-          , 500)
-          $(this).text('Read more')
 
-        else
-          $('.read-more-container').animate(
-            height: 1600
-          , 500)
-          $(this).text('Read less')
+        collapsed = $('.read-more-container').height() > initialHeight
+
+        $('.read-more-container').animate(
+            height: if collapsed then initialHeight else maxHeight, 
+            readmoreDelay)
+          $(this).text(if collapsed then 'Read more' else 'Read less')
+
         false
 
       lightbox : $('.images-container').on 'click', 'img', ->
