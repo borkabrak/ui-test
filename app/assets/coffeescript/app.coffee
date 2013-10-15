@@ -33,8 +33,8 @@ $ ->
           if e.keyCode is 13 or e.keyCode is 27
             $('.lightbox').remove()
         
-        $('body').on 'click', (e) ->
-            if $(e.target).hasClass('lightbox') then $('.lightbox').remove()
+        $('.lightbox').on 'click', (e) ->
+            $(this).remove()
 
     }
 
