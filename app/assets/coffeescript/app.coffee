@@ -14,6 +14,7 @@ $ ->
 
     return {
 
+      # 'Read more' collapse/expand
       open : $('.button').on 'click', ->
 
         collapsed = $('.read-more-container').height() > initialHeight
@@ -25,6 +26,7 @@ $ ->
 
         false
 
+      # lightbox open/close
       lightbox : $('.images-container').on 'click', 'img', ->
         image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'))
         lightboxContainer = $('<div/>').addClass('lightbox').append(image)
@@ -32,7 +34,8 @@ $ ->
         $('body').append(lightboxContainer).on 'keyup', (e) ->
           if e.keyCode is 13 or e.keyCode is 27
             $('.lightbox').remove()
-        
+
+        # Clicking a lightbox removes it
         $('.lightbox').on 'click', (e) ->
             $(this).remove()
 
