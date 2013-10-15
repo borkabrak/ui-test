@@ -1,5 +1,8 @@
-FIXING THE LONELY PLANET TEST CODE
+LONELY PLANET UI - THOUGHT PROCESS
 ==================================
+
+These are generally going to be fairly abstract concepts -- the specifics for
+each change can be found in my commit messages.
 
 HTML
 ----
@@ -25,3 +28,11 @@ CSS
 
 JAVASCRIPT
 ----------
+
+* The lightbox should go away when you click it, instead of having
+  to figure out 'Esc'.
+
+* I'm adding empty lines for clarity.  This *really* doesn't matter, since
+  it's transcompiled to javascript anyway, and would be minified before going
+  into production.  (Plus, it saves the utility of a couple of my favorite vim
+  commands: '{' and '}'!  :)
